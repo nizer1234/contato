@@ -1,0 +1,187 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+    margin:0;
+    font-size: 16px;
+    color:black
+}
+a{
+    text-decoration: none;
+}
+nav{width: 100%;
+    height: 8vh;
+    background-color:black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position:fixed;
+    z-index: 1;
+    color:#FFFFFF;
+}
+.menu{
+    list-style:none;
+    display: flex;
+    text-align: center;
+    padding: 50px;
+}
+.menu a{
+    color:#FFFFFF;
+    text-decoration: none;
+    display:block;
+    padding: 1rem;
+    text-align: center;
+}
+.label-menu,.checkbox{
+    display: none;
+}
+.menu a:hover{
+    background-color:#1f9aa5 ;
+    color:#FFFFFF;
+    border-radius: 8px;
+}
+header{
+    width: 100%;
+    height: 100%;
+    background-image: url(tecnologia-na-educação.png);
+    background-size: cover;
+    position:relative;
+    background-attachment: fixed;
+}
+header h2{
+    position: absolute;
+    width: 100%;
+    color:#FFFFFF;
+    margin-left: 280px;
+    top:15%;
+    font-size: 46px;
+}
+header h3{
+    position: absolute;
+    width: 100%;
+    color:#FFFFFF;
+    margin-left: 280px;
+    top:23%;
+    font-size: 32px;
+}
+
+.formulario{
+    width:31.3rem;
+    margin:auto;
+    margin-top: 2rem;
+}
+h4{
+    padding-top: 100px;
+    text-align: center;
+    font-size: 22px;
+}
+.campo{
+    width: 100%;
+    padding: 15px;
+    margin: 4px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    resize: none;
+ 
+}
+.botao{
+    width: 100%;
+    border:none;
+    padding: 15px;
+    margin:2px;
+    background-color:#23bac8;
+    color:#FFFFFF;
+    border-radius: 6px;
+}
+.botao:hover{
+    background-color:#085b62;
+    
+}
+
+
+
+
+
+
+
+@media (max-width:496px){ 
+    body{
+        font-size: 10px;
+    }
+    header{
+        background-size: cover; 
+        background-position: center; 
+    }
+    header h2{
+        margin-left: 80px;
+        top:10%;
+        font-size: 26px;
+    }
+    header h3{
+    
+    margin-left: 80px;
+    top:15%;
+    font-size: 20px;
+}
+.menu{
+    width: 15%;
+    display:block;
+    position: absolute;
+    background-color: black;
+    text-align: justify;
+    top:2.0rem;
+    z-index: 1;
+    margin-left: -10%;
+    visibility: hidden;
+    overflow: hidden;
+    transition: 1s;
+}
+.menu a{
+    font-size: 15px;
+    padding: 0.5rem 0;
+}
+.label-menu{
+    display: flex;
+    align-items: center;
+    gap:0.5rem;
+    color:#FFFFFF;
+    padding:1rem 0;
+    cursor:pointer;
+}
+.hamburger{
+    border-top:0.125rem solid;
+    width:1.25rem;
+}
+.hamburger::after,.hamburger::before{
+    content:" ";
+    display: block;
+    width: 1.25rem;
+    height: 0.125rem;
+    background: currentColor;
+    margin-top: 0.3rem;
+    position: relative;
+    transition: 0.5s;
+}
+.checkbox:checked ~ .menu{
+    height: calc(100vh - 4.6875rem);
+    visibility: visible;
+    overflow-y: auto;
+}
+.checkbox:checked ~.label-menu .hamburger{
+    border-top-color: transparent;
+}
+.checkbox:checked ~.label-menu .hamburger::before{
+    transform: rotate(135deg);
+}
+.checkbox:checked ~.label-menu .hamburger::after{
+    transform: rotate(-135deg);
+    top:-0.4375rem;
+}
+
+
+}
+
